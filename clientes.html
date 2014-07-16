@@ -48,8 +48,10 @@
 				var cliente = $(this).attr('class');
 				$('.descripciones > .elementos').children().each(function() {
 					if ($(this).hasClass(cliente)) {
-						$(this).css({ opacity: 1 });
-					};
+						$(this).css({ opacity: 1, top: 0 });
+					} else {
+						$(this).css({ opacity: 0 });
+					}
 				});
 			}, function() {
 				/* Nada */
