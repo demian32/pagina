@@ -4,6 +4,19 @@
 	<meta charset="UTF-8">
 	<title>Probando...</title>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<style type="text/css">
+		.descripciones {
+			float: left;
+		}
+		.clientes {
+			margin: 2em;
+			float: left;
+		}
+		.descripcion {
+			opacity: 0;
+			position: absolute;
+		}
+	</style>
 </head>
 <body>
 	<!-- Las descripciones: cada una tiene una clase única para distinguirla -->
@@ -23,5 +36,20 @@
 			<li class="tres">Soy el cliente tres</li>
 		</ul>
 	</div>
+
+	<script type="text/javascript">
+		$(function () {
+			$('.descripciones > .elementos').children().first().css({
+				opacity: 1,
+				top: 0
+			});
+
+			$('.lista-clientes > li').hover(function() {
+				/* Cosas que hacer cuando el mouse entra */
+			}, function() {
+				/* Nada */
+			});
+		});
+	</script>
 </body>
 </html>
