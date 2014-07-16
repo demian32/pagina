@@ -45,7 +45,12 @@
 			});
 
 			$('.lista-clientes > li').hover(function() {
-				/* Cosas que hacer cuando el mouse entra */
+				var cliente = $(this).attr('class');
+				$('.descripciones > .elementos').children().each(function() {
+					if ($(this).hasClass(cliente)) {
+						$(this).css({ opacity: 1 });
+					};
+				});
 			}, function() {
 				/* Nada */
 			});
